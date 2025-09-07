@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <style>
+    html {
+  scroll-behavior: smooth;
+  }
+    body {
+  border: 1px solid black;
+  box-sizing: border-box;
+  }
+    /* Style général de la barre */
+    .navbar {
+      background-color: black;
+      overflow: hidden;
+      padding: 50px 90px 50px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Partie gauche : nom + prénom */
+    .identité {
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .nom {
+      color: white;
+    }
+
+    .prenom {
+      color: #00e0d0;
+      margin-left: 5px;
+    }
+
+    /* Partie droite : navigation */
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 50px;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00e0d0;
+    }
+    /* Première section */
+.hero-section {
+  background-color: white;
+  padding: 60px 2cm 100px 0px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* utile pour responsive */
+  
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 100%;
+  font-family:  Arial ;
+  font-size: 14px;
+
+    /* Ajouts pour centrer */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre horizontalement */
+  text-align: center; /* centre le texte lui-même */
+  
+}
+
+.hero-text h1 {
+  font-size: 28px;
+  line-height: 1.5;
+  color:black;
+  align-items: center;
+  font-size: 35px;
+}
+
+.hero-text .prenom {
+  color: #00e0d0;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #00e0d0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 18px;
+}
+
+.hero-button:hover {
+  background-color: #00b3a4;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 25%;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*Deusieme section*/
+    .about-section {
+  padding: 30px 2cm 2cm;
+  background-color: rgb(240, 236, 236);
+  color: #333;
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid black;
+  border-right:1px solid black ;
+  border-left: 1px solid black;
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #00e0d0;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* responsive */
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-text p {
+  margin-bottom: 0px;
+}
+
+
+
+.highlight {
+  color: #00e0d0;
+  font-weight: bold;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 40%;
+  text-align: center;
+}
+
+.about-image img {
+  width: 250px; /* adapte selon ton besoin */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%; /* Cercle */
+  border: 4px solid #00e0d0;
+}
+.cv-button {
+  display: inline-block;
+  /* margin-top: px; */
+  padding: 12px 25px;
+  background-color: #00e0d0;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #00b3a4;
+}
+
+/*SECTION 3*/
+.projects-section {
+  background-color: white;
+  padding: 60px 1cm;
+  font-family: Arial, sans-serif;
+}
+
+.projects-section h2 {
+  text-align: center;
+  color: #00e0d0;
+  font-size: 32px;
+  margin-bottom: 70px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* espace entre les cartes */
+  flex-wrap: wrap; /* utile pour responsive */
+}
+
+.project-card {
+  background-color: rgb(240, 236, 236);
+  padding: 30px 10px;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.tags {
+  color: #00e0d0;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00e0d0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #00b3a4;
+}
+/*SECTION 4*/
+    .skills-section {
+      background-color: rgb(240, 236, 236);
+      padding: 40px 70px;
+    }
+
+    .skills-section h1 {
+      text-align: center;
+      color: #000;
+      font-size: 32px;
+      margin-bottom: 80px;
+    }
+
+    .skills-cards {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 100px;
+    
+    }
+
+    .skill-card {
+      background-color: white;
+      padding: 20px 30px ;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      width: 35%;
+    }
+
+    .skill-card h2 {
+      text-align: center;
+      color: #000;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .skill-container {
+      margin-bottom: 10px;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 6px;
+      text-align: left;
+    }
+
+    .skill-bar-background {
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 30px;
+      overflow: hidden;
+      height: 15px;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background-color: #00e0d0;
+      border-radius: 30px;
+      transition: width 0.5s ease-in-out;
+    }
+
+    /* SECTION 5 - Contact */
+.contact-section {
+  background-color: black;
+  padding: 10px 2cm;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#contact::before {
+  content: "";
+  display: block;
+  height: 80px; /* hauteur du header ou espace à compenser */
+  margin-top: -80px; /* même valeur en négatif */
+  visibility: hidden;
+}
+
+.contact-title {
+  font-size: 28px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.contact-title .highlight {
+  color: #00e0d0;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 5px;
+  border: 2px solid #00e0d0;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f0f0f0;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #00b3a4;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input-group textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.form-button-container {
+  text-align: center;
+}
+
+.contact-button {
+  background-color: #00e0d0;
+  color: white;
+  border: none;
+  padding: 8px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #00b3a4;
+}
+
+/* FOOTER */
+.footer {
+  background-color: white;
+  padding: 40px 1.5cm;
+  font-family: Arial, sans-serif;
+  color: black;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left .highlight {
+  color: #00e0d0;
+  font-weight: bold;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 40px;
+}
+
+/* Zoom léger au survol de l'image */
+img {
+    transition: transform 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Transition des liens */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #007777;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <!-- Partie gauche -->
+      <div class="identité">
+        <span class="nom"><b>AKDIM </b></span><span class="prenom"><b>TOUNAROUZ</b></span>
+      </div>
+
+      <!-- Partie droite -->
+      <div class="nav-links">
+        <a href="#acceuil">Accueil</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#fin-contact">Contact</a>
+      </div>
+    </div>
+  </header>
+  <!-- SECTION 1 : Présentation -->
+    <section class="hero-section" id="accueil">
+    <div class="hero-content">
+    <!-- Partie gauche -->
+        <div class="hero-text">
+            <h1>Je suis <span class="prenom">TOUNAROUZ</span>,
+                Développeur en devenir <br>
+                passionnée par le web et le design !
+            </h1>
+            <a href="#projets" class="hero-button"><b>Voir mes projets</b></a>
+        </div>
+
+    <!-- Partie droite -->
+        <div class="hero-image">
+            <img src="Dclic_image.jpg" alt="Dclic image" />
+        </div>
+    </div>
+    </section>
+
+  <!--SECTION 2-->
+    <section class="about-section" id="a-propos">
+    <h2><b>À propos</b></h2>
+  <div class="about-content">
+    <div class="about-text">
+      <p>
+        Je m'appelle <span class="highlight">AKDIM</span>, passionnée par la <br>
+        création de sites web modernes et interactifs
+      </p>
+      <p>
+        Je suis actuellement étudiante en <span class="highlight">développement web</span>,<br>
+        et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.
+      </p>
+      <p>
+        J'adore transformer mes idées en projets concrets<br>
+        et expérimenter avec les nouvelles technologies.
+      </p>
+      <a href="CV_AKDIM_TOUNAROUZ-1.pdf" download class="cv-button">Télécharger mon CV</a>
+    </div>
+    <div class="about-image">
+      <img src="Photo.jpg" alt="Photo de moi" />
+    </div>
+  </div>
+</section>
+
+<!--SECTION 3-->
+<section class="projects-section" id="projets">
+  <h2>Mes Projets</h2>
+  <div class="projects-container">
+    <!-- Projet 1 -->
+    <div class="project-card">
+      <p>To-Do List : <br>-> Application web simple de gestion de tâches (to-do list).</p>
+      <br><br>
+      <p class="tags">#html, #css, #js</p>
+      <a href="todolist7delete.html" class="project-button" target="_blank">Voir</a>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="project-card">
+      <p>Carte mentale :<br>-> Carte mentale sur le Web et ses principes de base.</p>
+      <br><br>
+      <p class="tags">#html, #css, #js</p>
+      <a href="cartementale.pdf" class="project-button" target="_blank">Voir</a>
+    </div>
+
+    <!-- Projet 3 -->
+    <div class="project-card">
+      <p>Calculateur :<br>-> Calculateur de prêt hypothécaire (€, %, Années)</p>
+      <br><br>
+      <p class="tags">#html, #css, #js</p>
+      <a href="calculateurpro.html" class="project-button" target="_blank">Voir</a>
+      
+    </div>
+  </div>
+</section>
+
+<!--SECTION 4-->
+  <section class="skills-section" id="competences">
+    <h1>Mes Compétences</h1>
+
+    <div class="skills-cards">
+
+      <!-- Soft Skills -->
+      <div class="skill-card">
+        <h2>Soft Skills</h2>
+
+         <div class="skill-container">
+          <div class="skill-name">Organisation / Prise d'initiative</div>
+          <div class="skill-bar-background">
+            <div class="skill-bar-fill" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="skill-name">Gestion de projets</div>
+          <div class="skill-bar-background">
+            <div class="skill-bar-fill" style="width: 55%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="skill-name">Résolution de problème</div>
+          <div class="skill-bar-background">
+            <div class="skill-bar-fill" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="skill-name">Adaptabilité</div>
+          <div class="skill-bar-background">
+            <div class="skill-bar-fill" style="width: 70%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hard Skills -->
+      <div class="skill-card" id="contact">
+        <h2>Hard Skills</h2>
+
+      <div class="skill-container">
+          <div class="skill-name">VS Code</div>
+          <div class="skill-bar-background">
+            <div class="skill-bar-fill" style="width: 95%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="skill-name">HTML</div>
+          <div class="skill-bar-background">
+            <div class="skill-bar-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="skill-name">CSS</div>
+          <div class="skill-bar-background">
+            <div class="skill-bar-fill" style="width: 60%;"></div>
+          </div>
+        </div>
+
+        <div class="skill-container">
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-bar-background">
+            <div class="skill-bar-fill" style="width: 70%;"></div>
+          </div>
+        </div>
+
+        
+      </div>
+
+    </div>
+  </section>
+
+<!--SECTION 5-->
+<section class="contact-section">
+  <h2 class="contact-title">
+    <b>Vous avez un </b><span class="highlight">projet en tête</span> ? <br>
+    N'hésitez pas à me <span class="highlight">contacter</span>
+  </h2>
+
+  <form class="contact-form" id="contactForm" autocomplete="off">
+    <div class="input-row">
+      <div class="input-group">
+        <label for="prenom">Votre prénom</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Jhon" required>
+      </div>
+      <div class="input-group">
+        <label for="nom">Votre nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Romali" required>
+      </div>
+    </div>
+
+    <div class="input-group full-width">
+      <label for="sujet">Votre sujet</label>
+      <input type="text" id="sujet" name="sujet" placeholder="Développement d'un site web" required>
+    </div>
+
+    <div class="input-group full-width">
+      <textarea id="message" placeholder="Ecrivez votre message ici!"></textarea>
+    </div>
+
+    <div class="form-button-container">
+      <button type="submit" class="contact-button">Envoyer</button>
+    </div>
+  </form>
+</section>
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      Designed by <span class="highlight">AKDIM</span> with HTML CSS JS
+    </div>
+    <div class="footer-right">
+      Tous droits réservés - 2025
+    </div>
+  </div>
+</footer>
+<div id="fin-contact"></div>
+
+<script>
+
+const cards = document.querySelectorAll('.project-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.backgroundColor = '#e0f7f5'; // Vert d'eau clair
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.backgroundColor = 'rgb(240, 236, 236)'; // Couleur originale
+    });
+  });
+
+    const skillcard = document.querySelectorAll('.skill-card');
+
+  skillcard.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.backgroundColor = '#e0f7f5'; // Vert d'eau clair
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.backgroundColor = 'white'; // Couleur originale
+    });
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche le rechargement
+
+    const prenom = document.getElementById('prenom').value.trim();
+    const nom = document.getElementById('nom').value.trim();
+    const sujet = document.getElementById('sujet').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+     // Validation simple
+    if (!prenom || !nom || !sujet || !message) {
+      alert("Veuillez remplir tous les champs du formulaire.");
+      return; // Stoppe l'envoi
+    }
+
+    // Nettoyage du formulaire
+    document.getElementById('contactForm').reset();
+
+    // Construction de l'URL avec les paramètres GET
+    const params = new URLSearchParams({
+      prenom: prenom,
+      nom: nom,
+      sujet: sujet,
+      message: message
+    });
+
+    // Ouvrir la page de confirmation dans un nouvel onglet avec les données dans l'URL
+    window.open('confirmation.html?' + params.toString(), '_blank');
+  });
+</script>
+
+</body>
+</html>
