@@ -516,7 +516,7 @@ a:hover {
         J'adore transformer mes idées en projets concrets<br>
         et expérimenter avec les nouvelles technologies.
       </p>
-      <a href="CV_AKDIM_TOUNAROUZ-1.pdf" download class="cv-button">Télécharger mon CV</a>
+      <a href="CV_AKDIM_TOUNAROUZ_2025.pdf" download class="cv-button">Télécharger mon CV</a>
     </div>
     <div class="about-image">
       <img src="Photo.jpg" alt="Photo de moi" />
@@ -684,10 +684,10 @@ const cards = document.querySelectorAll('.project-card');
 
   cards.forEach(card => {
     card.addEventListener('mouseenter', () => {
-      card.style.backgroundColor = '#e0f7f5'; // Vert d'eau clair
+      card.style.backgroundColor = '#e0f7f5'; 
     });
     card.addEventListener('mouseleave', () => {
-      card.style.backgroundColor = 'rgb(240, 236, 236)'; // Couleur originale
+      card.style.backgroundColor = 'rgb(240, 236, 236)'; 
     });
   });
 
@@ -695,10 +695,10 @@ const cards = document.querySelectorAll('.project-card');
 
   skillcard.forEach(card => {
     card.addEventListener('mouseenter', () => {
-      card.style.backgroundColor = '#e0f7f5'; // Vert d'eau clair
+      card.style.backgroundColor = '#e0f7f5'; 
     });
     card.addEventListener('mouseleave', () => {
-      card.style.backgroundColor = 'white'; // Couleur originale
+      card.style.backgroundColor = 'white'; 
     });
   });
 
@@ -719,7 +719,7 @@ const cards = document.querySelectorAll('.project-card');
     // Nettoyage du formulaire
     document.getElementById('contactForm').reset();
 
-    // Construction de l'URL avec les paramètres GET
+    
     const params = new URLSearchParams({
       prenom: prenom,
       nom: nom,
